@@ -1,0 +1,10 @@
+﻿Mediator tasarım deseni, nesneler arasındaki etkileşimi merkezi bir ara obje üzerinden yönetmek amacıyla kullanılan bir davranışsal tasarım desenidir.
+Bu desen, nesnelerin birbirleriyle doğrudan iletişim kurmasını önler ve istemci (client) sınıfın,
+nesneler arasındaki karmaşık ilişkileri daha düzenli bir şekilde yönetmesini sağlar. 
+Bu sayede, bir nesne değiştiğinde diğer nesnelerin bundan etkilenmesi azalır ve sistem daha esnek hale gelir.
+
+Mediator deseninde, iletişim için kullanılacak olan "Mediator" adı verilen bir arabulucu (aracı) sınıf vardır.
+Diğer sınıflar Mediator ile haberleşir ve Mediator da gerektiğinde ilgili sınıflara mesajları ileterek etkileşimi sağlar.
+Bu örnekte, FlightControlCenter sınıfı Mediator olarak görev yapmaktadır.
+Airplane ve Runway sınıfları ise Mediator ile haberleşir ve her uçak iniş veya kalkış talebinde bulunurken Mediator tarafından koordine edilir.
+Uçakların belirli bir pisti kullanmasını sağlamak için Mediator, pistleri kontrol ederek uygun bir pistin olup olmadığını belirler ve uygun pisti uçağa tahsis eder.
